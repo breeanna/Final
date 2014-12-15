@@ -5,10 +5,7 @@
         <script>
             $(document).ready(function(){
                 
-                // var answer = prompt("Search the feed for:");
-
-                var answer = "cake";
-
+                var answer = prompt("Search the feed for:");
                 
                 $.getJSON("http://cooper-union-instagram-proxy.herokuapp.com/search/tag/" + answer + "?count=21",function(response){
 

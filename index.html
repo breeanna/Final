@@ -5,12 +5,14 @@
         <script>
             $(document).ready(function(){
                 
-                var answer = prompt("Search the feed for:");
+                // var answer = prompt("Search the feed for:");
+
+                var answer = "cake";
 
                 
                 $.getJSON("http://cooper-union-instagram-proxy.herokuapp.com/search/tag/" + answer + "?count=21",function(response){
 
-                    for(var i= 0; i < 20; i++){
+                    for(var i= 0; i < 21; i++){
 
                         var divClass= ".a" +i;
 
@@ -38,7 +40,7 @@
 
                 $.getJSON("http://cooper-union-search-proxy.herokuapp.com/twitter/search/" + answer + "?count=21",function(response){
 
-                    for(var j= 0; j < 20; j++){
+                    for(var j= 0; j < 21; j++){
 
                         var divClass = ".a" + j + "";
 
@@ -51,8 +53,9 @@
                         $(divClass).append("<p>"+ textbg +"</p>");
 
                     };
-                });       
+                });   
                 
+
             });                   
 
     </script>
